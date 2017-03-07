@@ -3,4 +3,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-render(<h1>Go for React!</h1>, document.getElementById('root'));
+render(
+  <main>
+    <h1>Hello! 😎</h1>
+  </main>
+, document.getElementById('root'));
