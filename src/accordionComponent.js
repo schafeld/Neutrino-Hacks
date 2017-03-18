@@ -21,8 +21,7 @@ class AccordionComponent extends React.Component {
     // Parentheses are rquired if JSX isn't  in same line as return statement.
     return (
         <div className="wrapper">
-          <input type="text"
-            onChange={this.update.bind(this)} />
+            <Widget update={this.update.bind(this)} />
             <div className="another-text-box">
                 {this.state.txt} &amp; some string
             </div>
@@ -33,6 +32,8 @@ class AccordionComponent extends React.Component {
     );
   }
 }
+
+const Widget = props => <input type="text" onChange={props.update} />;
 
 AccordionComponent.propTypes = {
   author: React.PropTypes.string,
