@@ -28,12 +28,22 @@ class AccordionComponent extends React.Component {
             <div className="text-box">
                 some other string, authored by {author}
             </div>
+            <WidgetTwo>I <Heart/> React</WidgetTwo>
         </div>
     );
   }
 }
 
 const Widget = props => <input type="text" onChange={props.update} />;
+
+// stateless component gets props from component call
+const WidgetTwo = props => <div className="some-box">{props.children}</div>;
+
+class Heart extends React.Component {
+  render() {
+    return <span>&hearts;</span>;
+  }
+}
 
 AccordionComponent.propTypes = {
   author: React.PropTypes.string,
